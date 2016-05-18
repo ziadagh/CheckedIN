@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="checkedin_backend-android-endpoints">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/checkedin_backend/build/libs/checkedin_backend-android-endpoints.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

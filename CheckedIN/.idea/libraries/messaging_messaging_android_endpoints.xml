@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="messaging.messaging-android-endpoints">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/messaging/build/libs/messaging-android-endpoints.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

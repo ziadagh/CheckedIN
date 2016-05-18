@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\Users\\Ibrahim\\Desktop\\Last One\\CheckedIN\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\btn_liked_red.png",
+        "source": "C:\\Users\\Ibrahim\\Desktop\\Last One\\CheckedIN\\app\\src\\main\\res\\mipmap-xhdpi\\btn_liked_red.png"
+    },
+    {
+        "merged": "C:\\Users\\Ibrahim\\Desktop\\Last One\\CheckedIN\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\checkout.png",
+        "source": "C:\\Users\\Ibrahim\\Desktop\\Last One\\CheckedIN\\app\\src\\main\\res\\mipmap-xhdpi\\checkout.png"
+    },
+    {
+        "merged": "C:\\Users\\Ibrahim\\Desktop\\Last One\\CheckedIN\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\whitelogo.png",
+        "source": "C:\\Users\\Ibrahim\\Desktop\\Last One\\CheckedIN\\app\\src\\main\\res\\mipmap-xhdpi\\whitelogo.png"
+    },
+    {
+        "merged": "C:\\Users\\Ibrahim\\Desktop\\Last One\\CheckedIN\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\login.png",
+        "source": "C:\\Users\\Ibrahim\\Desktop\\Last One\\CheckedIN\\app\\src\\main\\res\\mipmap-xhdpi\\login.png"
+    },
+    {
+        "merged": "C:\\Users\\Ibrahim\\Desktop\\Last One\\CheckedIN\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\deafult_circle.png",
+        "source": "C:\\Users\\Ibrahim\\Desktop\\Last One\\CheckedIN\\app\\src\\main\\res\\mipmap-xhdpi\\deafult_circle.png"
+    },
+    {
+        "merged": "C:\\Users\\Ibrahim\\Desktop\\Last One\\CheckedIN\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\default_square.png",
+        "source": "C:\\Users\\Ibrahim\\Desktop\\Last One\\CheckedIN\\app\\src\\main\\res\\mipmap-xhdpi\\default_square.png"
+    },
+    {
+        "merged": "C:\\Users\\Ibrahim\\Desktop\\Last One\\CheckedIN\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\logo.png",
+        "source": "C:\\Users\\Ibrahim\\Desktop\\Last One\\CheckedIN\\app\\src\\main\\res\\mipmap-xhdpi\\logo.png"
+    },
+    {
+        "merged": "C:\\Users\\Ibrahim\\Desktop\\Last One\\CheckedIN\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\check_out.png",
+        "source": "C:\\Users\\Ibrahim\\Desktop\\Last One\\CheckedIN\\app\\src\\main\\res\\mipmap-xhdpi\\check_out.png"
+    }
+]

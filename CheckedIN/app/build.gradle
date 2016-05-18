@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+    defaultConfig {
+        applicationId 'com.checkedin'
+        minSdkVersion 19
+        targetSdkVersion 19
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    productFlavors {
+    }
+    defaultConfig {
+        multiDexEnabled = true;
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+dependencies {
+
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    //compile 'com.android.support:support-v4:18.0.0'
+    compile project(path: ':checkedin_backend', configuration: 'android-endpoints')
+    compile project(path: ':messaging', configuration: 'android-endpoints')
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.google.android.gms:play-services-ads:8.4.0'
+    compile 'com.google.android.gms:play-services-identity:8.4.0'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+}
+apply plugin: 'com.google.gms.google-services'

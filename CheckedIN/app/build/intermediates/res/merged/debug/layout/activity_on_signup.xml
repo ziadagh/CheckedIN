@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ui.OnSignup"
+    android:background="@drawable/login_bg">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Congratulations!"
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white_smoke"
+            android:textSize="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="You have just joined"
+            android:id="@+id/textView3"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white_smoke"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView18"
+            android:textColor="@color/white_smoke"
+            android:textSize="50dp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="CheckedIn!"
+            android:id="@+id/textView19"
+            android:textColor="@color/white_smoke"
+            android:textSize="50dp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="125dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textView9"
+            android:textColor="@color/white_smoke"
+            android:textSize="30dp"
+            android:layout_gravity="center_horizontal" />
+
+        <!--<Button
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:text="Edit Profile"
+            android:id="@+id/onsignup_editprofile_button"
+            android:layout_gravity="center_horizontal"
+            android:background="#eae4e4"
+            android:layout_marginBottom="2dp"
+            android:textColor="#000000"
+            android:clickable="true"
+            android:onClick="onClick" />-->
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:text="Check In!"
+            android:id="@+id/onsignup_checkin_button"
+            android:layout_gravity="center_horizontal"
+            android:background="#eae4e4"
+            android:onClick="onClick"
+            android:clickable="true" />
+    </LinearLayout>
+</RelativeLayout>

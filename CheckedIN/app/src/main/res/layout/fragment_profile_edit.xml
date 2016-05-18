@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/s1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/page">
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <HorizontalScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/pad_10dp" >
+
+                <ImageView
+                    style="@style/img_profile"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_marginLeft="@dimen/pad_10dp"
+                    android:src="@drawable/default_user"
+                    android:id="@+id/img1" />
+
+                <ImageView
+                    style="@style/img_profile"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_marginLeft="@dimen/pad_10dp"
+                    android:src="@drawable/default_user"
+                    android:id="@+id/img2" />
+
+                <ImageView
+                    style="@style/img_profile"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    android:layout_marginLeft="@dimen/pad_10dp"
+                    android:src="@drawable/default_user"
+                    android:id="@+id/img3" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/pad_10dp" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editprofile_fname"
+                    android:hint="Ziad" />
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editprofile_lname"
+                    android:hint="Agha" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editprofile_dob"
+                    android:layout_weight="1"
+                    android:hint="DD-MM-YYYY" />
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:drawableLeft="@drawable/icp_location"
+                android:ems="10"
+                android:id="@+id/editprofile_currentcity"
+                android:hint="Beirut, Lebanon" />
+
+            <RelativeLayout
+                android:id="@+id/rel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/pad_20dp" >
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icp_about" />
+
+                <TextView
+                    android:id="@+id/lbl"
+                    style="@style/lbl_14gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pad_5dp"
+                    android:layout_toRightOf="@+id/img"
+                    android:text="@string/about"
+                    android:textSize="@dimen/txt_16sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editprofile_bio"
+                    android:layout_below="@+id/lbl"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView33" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Changes"
+                android:id="@+id/editprofile_save_button"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onClick"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

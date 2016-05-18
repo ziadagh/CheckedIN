@@ -1,0 +1,473 @@
+{
+ "kind": "discovery#restDescription",
+ "etag": "\"H01Z-1ikbwOw463Un2bFZHenx1g/M7sOAlPcxSqx41zT-s6rBPiKqok\"",
+ "discoveryVersion": "v1",
+ "id": "userApi:v1",
+ "name": "userApi",
+ "version": "v1",
+ "description": "This is an API",
+ "ownerDomain": "backend.myapplication.Ibrahim.example.com",
+ "ownerName": "backend.myapplication.Ibrahim.example.com",
+ "icons": {
+  "x16": "http://www.google.com/images/icons/product/search-16.gif",
+  "x32": "http://www.google.com/images/icons/product/search-32.gif"
+ },
+ "protocol": "rest",
+ "baseUrl": "https://myApplicationId.appspot.com/_ah/api/userApi/v1/",
+ "basePath": "/_ah/api/userApi/v1/",
+ "rootUrl": "https://myApplicationId.appspot.com/_ah/api/",
+ "servicePath": "userApi/v1/",
+ "batchPath": "batch",
+ "parameters": {
+  "alt": {
+   "type": "string",
+   "description": "Data format for the response.",
+   "default": "json",
+   "enum": [
+    "json"
+   ],
+   "enumDescriptions": [
+    "Responses with Content-Type of application/json"
+   ],
+   "location": "query"
+  },
+  "fields": {
+   "type": "string",
+   "description": "Selector specifying which fields to include in a partial response.",
+   "location": "query"
+  },
+  "key": {
+   "type": "string",
+   "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+   "location": "query"
+  },
+  "oauth_token": {
+   "type": "string",
+   "description": "OAuth 2.0 token for the current user.",
+   "location": "query"
+  },
+  "prettyPrint": {
+   "type": "boolean",
+   "description": "Returns response with indentations and line breaks.",
+   "default": "true",
+   "location": "query"
+  },
+  "quotaUser": {
+   "type": "string",
+   "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.",
+   "location": "query"
+  },
+  "userIp": {
+   "type": "string",
+   "description": "IP address of the site where the request originates. Use this if you want to enforce per-user limits.",
+   "location": "query"
+  }
+ },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "View your email address"
+    }
+   }
+  }
+ },
+ "schemas": {
+  "User": {
+   "id": "User",
+   "type": "object",
+   "properties": {
+    "bio": {
+     "type": "string"
+    },
+    "currentCity": {
+     "type": "string"
+    },
+    "dob": {
+     "type": "string"
+    },
+    "email": {
+     "type": "string"
+    },
+    "fname": {
+     "type": "string"
+    },
+    "id": {
+     "type": "string",
+     "format": "int64"
+    },
+    "img2": {
+     "type": "string"
+    },
+    "img3": {
+     "type": "string"
+    },
+    "lname": {
+     "type": "string"
+    },
+    "password": {
+     "type": "string"
+    },
+    "profilepic": {
+     "type": "string"
+    },
+    "sex": {
+     "type": "string"
+    },
+    "status": {
+     "type": "string"
+    },
+    "username": {
+     "type": "string"
+    }
+   }
+  },
+  "UserCollection": {
+   "id": "UserCollection",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "User"
+     }
+    }
+   }
+  }
+ },
+ "methods": {
+  "deleteUser": {
+   "id": "userApi.deleteUser",
+   "path": "delete_user",
+   "httpMethod": "POST",
+   "parameters": {
+    "username": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    }
+   },
+   "parameterOrder": [
+    "username"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "deleteUserFromLocations": {
+   "id": "userApi.deleteUserFromLocations",
+   "path": "delete_user_locations",
+   "httpMethod": "POST",
+   "request": {
+    "$ref": "User",
+    "parameterName": "resource"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getAllUserImages": {
+   "id": "userApi.getAllUserImages",
+   "path": "get_all_user_images",
+   "httpMethod": "GET",
+   "response": {
+    "$ref": "UserCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getAllUserLocation": {
+   "id": "userApi.getAllUserLocation",
+   "path": "get_all_user_location",
+   "httpMethod": "GET",
+   "response": {
+    "$ref": "UserCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getImage": {
+   "id": "userApi.getImage",
+   "path": "get_image",
+   "httpMethod": "GET",
+   "parameters": {
+    "username": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    }
+   },
+   "parameterOrder": [
+    "username"
+   ],
+   "response": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getMatches": {
+   "id": "userApi.getMatches",
+   "path": "get_matches",
+   "httpMethod": "GET",
+   "parameters": {
+    "username": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    }
+   },
+   "parameterOrder": [
+    "username"
+   ],
+   "response": {
+    "$ref": "UserCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getProfilePic": {
+   "id": "userApi.getProfilePic",
+   "path": "get_profile_pic",
+   "httpMethod": "GET",
+   "parameters": {
+    "username": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    }
+   },
+   "parameterOrder": [
+    "username"
+   ],
+   "response": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getUser": {
+   "id": "userApi.getUser",
+   "path": "get_user",
+   "httpMethod": "GET",
+   "parameters": {
+    "id": {
+     "type": "string",
+     "required": true,
+     "format": "int64",
+     "location": "query"
+    }
+   },
+   "parameterOrder": [
+    "id"
+   ],
+   "response": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getUserByUsername": {
+   "id": "userApi.getUserByUsername",
+   "path": "getUserByUsername",
+   "httpMethod": "GET",
+   "parameters": {
+    "username": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    }
+   },
+   "parameterOrder": [
+    "username"
+   ],
+   "response": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getUsersByLocation": {
+   "id": "userApi.getUsersByLocation",
+   "path": "get_users_by_location",
+   "httpMethod": "GET",
+   "parameters": {
+    "Location": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    }
+   },
+   "parameterOrder": [
+    "Location"
+   ],
+   "response": {
+    "$ref": "UserCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getUsersILiked": {
+   "id": "userApi.getUsersILiked",
+   "path": "get_user_i_liked",
+   "httpMethod": "GET",
+   "parameters": {
+    "username": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    }
+   },
+   "parameterOrder": [
+    "username"
+   ],
+   "response": {
+    "$ref": "UserCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "getUsersLikedMe": {
+   "id": "userApi.getUsersLikedMe",
+   "path": "get_user_liked_me",
+   "httpMethod": "GET",
+   "parameters": {
+    "username": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    }
+   },
+   "parameterOrder": [
+    "username"
+   ],
+   "response": {
+    "$ref": "UserCollection"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "insertImage": {
+   "id": "userApi.insertImage",
+   "path": "insert_image",
+   "httpMethod": "POST",
+   "parameters": {
+    "img2": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    },
+    "img3": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    },
+    "profilepic": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    },
+    "username": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    }
+   },
+   "parameterOrder": [
+    "img2",
+    "img3",
+    "profilepic",
+    "username"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "insertUser": {
+   "id": "userApi.insertUser",
+   "path": "inser_user",
+   "httpMethod": "POST",
+   "request": {
+    "$ref": "User",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "insertUserLiked": {
+   "id": "userApi.insertUserLiked",
+   "path": "insert_user_liked",
+   "httpMethod": "POST",
+   "parameters": {
+    "likedUser": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    },
+    "username": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    }
+   },
+   "parameterOrder": [
+    "likedUser",
+    "username"
+   ],
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "insertUserLocation": {
+   "id": "userApi.insertUserLocation",
+   "path": "insert_user_location",
+   "httpMethod": "POST",
+   "parameters": {
+    "Location": {
+     "type": "string",
+     "required": true,
+     "location": "query"
+    }
+   },
+   "parameterOrder": [
+    "Location"
+   ],
+   "request": {
+    "$ref": "User",
+    "parameterName": "resource"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  },
+  "updateUser": {
+   "id": "userApi.updateUser",
+   "path": "user",
+   "httpMethod": "PUT",
+   "request": {
+    "$ref": "User",
+    "parameterName": "resource"
+   },
+   "response": {
+    "$ref": "User"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  }
+ }
+}

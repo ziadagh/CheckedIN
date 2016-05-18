@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/transparent"
+        android:dividerHeight="@dimen/pad_10dp"
+        android:fastScrollEnabled="true"
+        android:paddingBottom="@dimen/pad_10dp"
+        android:paddingTop="@dimen/pad_10dp"
+        tools:listitem="@layout/fragment_chat_item_sent" >
+
+    </ListView>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/gray" />
+    
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/fragment_chat_compose_view" />
+
+</LinearLayout>

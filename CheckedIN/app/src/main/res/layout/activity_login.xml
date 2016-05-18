@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/pad_40dp"
+    android:paddingRight="@dimen/pad_40dp"
+    android:background="@drawable/login_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="CheckedIN"
+        android:id="@+id/title"
+        android:textSize="50dp"
+        android:textColor="@color/white_smoke"
+        android:layout_marginTop="85dp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
+
+
+    <ProgressBar
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/login_progressBar"
+        android:progressDrawable="@drawable/circular_progress_view"
+        android:layout_gravity="center_horizontal"
+        android:indeterminate="false"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:weightSum="1">
+
+
+
+        <EditText
+            android:id="@+id/etUsername"
+            style="@style/txt_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_email"
+            android:hint="@string/username"
+            android:inputType="textEmailAddress" >
+
+            <requestFocus />
+        </EditText>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:background="@color/gray_divider" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            style="@style/txt_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etUsername"
+            android:drawableLeft="@drawable/ic_pwd"
+            android:hint="@string/password"
+            android:inputType="textPassword" >
+        </EditText>
+
+        <Button
+            android:id="@+id/login_button"
+            style="@style/btn_red_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etPassword"
+            android:layout_marginBottom="@dimen/pad_40dp"
+            android:layout_marginTop="@dimen/pad_10dp"
+            android:text="@string/login" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_button"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/login_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/pad_20dp"
+                android:paddingBottom="@dimen/pad_20dp"
+                android:text="@string/forgot_pwd"
+                android:textColor="@color/main_color_red_light"
+                android:textSize="@dimen/txt_13sp"
+                android:layout_marginRight="90dp" />
+
+            <TextView
+                android:textColor="#FFFFFF"
+                android:id="@+id/signup_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/pad_20dp"
+                android:paddingBottom="@dimen/pad_20dp"
+                android:text="@string/signup"
+                android:textSize="@dimen/txt_13sp"
+                android:clickable="true"
+                android:textColorLink="#ffffff" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color_red"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/pad_40dp" 
+    android:paddingRight="@dimen/pad_40dp">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/lbl_match_2"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="You and Sally liked each other."
+        android:id="@+id/match_text"
+        android:textSize="15dp"
+        android:textColor="#ffffff" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/pad_40dp"
+        android:layout_marginTop="@dimen/pad_40dp"
+        android:gravity="center"
+        android:paddingBottom="@dimen/pad_10dp"
+        android:paddingTop="@dimen/pad_10dp" >
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/user"
+            android:src="@mipmap/deafult_circle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="    "
+            android:id="@+id/textView15" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/match"
+            android:src="@mipmap/deafult_circle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnConversation"
+        style="@style/btn_red_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/start_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_conv"
+            android:drawableLeft="@drawable/ic_chat_red"
+            android:textColor="@color/main_color_red"
+            android:textSize="@dimen/txt_16sp"
+            android:drawablePadding="@dimen/pad_5dp"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/or"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_13sp"
+        android:textStyle="italic"
+        android:layout_margin="@dimen/pad_5dp" />
+
+    <LinearLayout
+        android:id="@+id/btnSurf"
+        style="@style/btn_red_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_border_rect">
+
+        <TextView
+            android:id="@+id/surfing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_search_white"
+            android:drawablePadding="@dimen/pad_5dp"
+            android:gravity="center_vertical"
+            android:text="@string/keep_surf"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_16sp" />
+
+        </LinearLayout>
+
+</LinearLayout>
